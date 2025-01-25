@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Position with Scrollbar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f7;
+            color: #333;
+            height: 200vh; /* Added to demonstrate the scrollbar */
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            padding: 6rem 2rem 2rem; /* Adjusted padding to account for fixed nav */
+        }
+
+        .box {
+            background-color: #f3f3f3;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+        }
+
+        .box h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .box p {
+            margin: 0.5rem 0 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="static.html">Static</a>
+        <a href="relative.html">Relative</a>
+        <a href="fixed.html">Fixed</a>
+        <a href="sticky.html">Sticky</a>
+        <a href="absolute.html">Absolute</a>
+    </nav>
+
+    <div class="container">
+        <h1>Fixed Position with Scrollbar</h1>
+        <p>The navigation bar and the box at the bottom-right are fixed. The content scrolls, and a scrollbar is present for demonstration.</p>
+        <p>Scroll down to see how the fixed elements remain in place while the rest of the page content scrolls.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula lacus sit amet turpis commodo, et scelerisque libero bibendum. Pellentesque vel mi a urna fermentum faucibus. Curabitur fringilla, velit sit amet pretium luctus, ligula arcu faucibus urna, id volutpat nisl sem in augue.</p>
+        <p>Proin ac magna efficitur, tempus purus at, dictum risus. Ut venenatis malesuada libero sit amet faucibus. Vestibulum auctor orci et erat feugiat, vel consequat turpis venenatis. Nam in erat euismod, facilisis libero nec, luctus elit.</p>
+        <p>Etiam euismod, nulla id accumsan malesuada, urna risus sagittis velit, non aliquet sapien ipsum ut est. Nam hendrerit magna vitae eros bibendum tincidunt. Sed feugiat consequat metus, in pharetra justo aliquet a. Quisque mollis consectetur risus, in porta justo.</p>
+    </div>
+
+    <div class="box">
+        <h2>Fixed Box</h2>
+        <p>I am a fixed element.</p>
+    </div>
+</body>
+</html>
